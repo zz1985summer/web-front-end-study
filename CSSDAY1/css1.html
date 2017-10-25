@@ -62,8 +62,8 @@
       }
 
     .ads-div{
-      align:"center";
       float:right;
+      align:"center";
       width:140px;
       height:150px;
       border:1px solid gray;
@@ -71,6 +71,8 @@
       font-size:12px;
       color:grey;
       background-color: #FAFFF9;
+      position:relative;
+      top:-200px;
     }
     .impt-font{
       color:red;
@@ -120,11 +122,22 @@
           <td></td>
         </tr>
       </table>
-      <div class="ads-div">
+      <div id="ads-div" class="ads-div">
         <span style="font-size:14px;color:black;"><img src=""/>手机快速注册</span>
         <hr/>
         <p>中国大陆手机用户,<br>请将短信"<span class="impt-font">JD</span>"发送到<span class="impt-font">1069013355500</span></p>
       </div>
     </fieldset>
   </body>
+  <script type="text/javascript">
+    //获取对象的初始位置
+    var ele=document.getElementById('ads-div').offsetTop;
+
+    window.onscroll=function(){
+      //ie与mozilla为前者，chrome取后者
+      var scroll_top=document.documentElement.scrollTop || document.body.scrollTop;
+      //滚动时分两种情况考虑，再赋值
+      document.getElementById('ads-div').style.top=scropp_top > ele?scroll_top - ele + 'px':0;
+    }
+  </script>
 </html>
