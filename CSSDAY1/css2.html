@@ -24,6 +24,8 @@
     }
     .footer .current{
       border:none;
+      background-color: transparent;
+      color:black;
     }
     .footer > a:hover{
       background-color: rgb(140,142,191);
@@ -32,15 +34,33 @@
       width:77px;
       height: 16px;
       background-image: url(images/iconlist_1.png);
+    }
+    div .star5{
       background-position:-107px -238px;
     }
-
+    div .star4{
+      background-position:-124px -238px;
+    }
+    div .star3{
+      background-position:-138px -238px;
+    }
+    div .star2{
+      background-position:-153px -238px;
+    }
+    div .star1{
+      background-position:-168px -238px;
+    }
+    #bottom-line{
+      border-bottom:1px solid grey;
+      padding:0 0 5px 5px;
+    }
   </style>
   <html>
     <body>
       <div class="comment-div">
-        <div class="comment-stars"></div>
-        <hr/>
+        <div id="bottom-line">
+          <div class="comment-stars star5"></div>
+        </div>
       </div>
       <div class="footer">
         <a class="current">1</a> <a href="#">2</a>
