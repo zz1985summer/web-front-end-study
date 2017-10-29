@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <title>css-3 练习</title>
+    <style>
+      body{
+        font-size:12px;
+      }
+      #discuss{
+        width:990px;
+        margin:0 auto;
+      }
+      .mt{
+        width:990px;
+        height:30px;
+        background:#F7F7F7;
+        border:1px solid #ddd;
+        border-top:2px solid #9B9B9B;
+      }
+
+
+      #discuss div.mt a{
+        /*左浮动，宽度，高度，水平排列，行高*/
+        float:left;
+        width:100px;
+        height:30px;
+        text-align:center;
+        line-height: 30px;
+        text-decoration:none;
+      }
+      #discuss-content{
+        border-bottom:1px solid #ddd;
+        padding-bottom:2px;
+      }
+      #discuss-datas{
+        width:990px;
+      }
+      #discuss div.mt a:hover{
+        color:#E4393C;
+        text-decoration: underline;
+      }
+      #discuss-datas i{
+      	/*21*17*/
+      	padding-left:21px;
+      	padding-bottom:2px;
+      	padding-top:3px;
+      	margin-right:3px;
+      	background-image:url(../Images/iconlist_1.png);
+      	background-repeat:no-repeat;
+      }
+      i.shai{
+      	background-position:-110px -220px;
+      }
+      i.lun{
+      	background-position:-152px -220px;
+      }
+      #discuss-datas th{
+        color:#666;
+        border-bottom: 1px solid #ddd;
+        padding:5px 0;
+      }
+      #discuss-datas .col1{
+      	width:600px;
+      	text-align:left;
+      }
+      #discuss-datas td{
+      	/*文字颜色，下边框，居中对齐，上下内边距*/
+      	color:#9c9a9c;
+      	border-bottom:1px dotted #ddd;
+      	text-align:center;
+      	padding:5px 0;
+      }
+      #discuss a{
+      	color:#005aa0;
+      	text-decoration:none;
+      }
+      #discuss div.mt a.current{
+        border:1px; solid #ddd;
+        border-bottom:none;
+        border-top:2px solid #e4393c;
+        background-color:#fff;
+        color:#e4393c;
+        margin-top:-6px;
+        height:35px;
+        line-height:35px;
+      }
+
+      #extra div.new{
+        float:left;
+
+      }
+      #extra div.total{
+        float:right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="discuss">
+      <div class="mt">
+        <a href="#">网友讨论圈</a>
+        <a href="#" class="current">问答贴</a>
+        <a href="#">讨论贴</a>
+        <a href="#">晒单贴</a>
+        <a href="#">圈子贴</a>
+      </div>
+      <div id="discuss-content">
+        <table id="discuss-datas">
+          <tr>
+            <th class="col1">主题</th>
+            <th>回复/浏览</th>
+            <th>作者</th>
+            <th>时间</th>
+          </tr>
+          <tr>
+            <td class="col1">
+              <i class="shai"></i>
+              <a href="#">好大一瓶，不错</a>
+            </td>
+            <td>0/0</td>
+            <td><a href="#">2001年冬天</a></td>
+            <td>2011-11-11 11:11:11</td>
+          </tr>
+          <tr>
+            <td class="col1">主题</td>
+            <td>回复/浏览</td>
+            <td>作者</td>
+            <td>时间</td>
+          </tr>
+          <tr>
+            <td class="col1">主题</td>
+            <td>回复/浏览</td>
+            <td>作者</td>
+            <td>时间</td>
+          </tr>
+        </table>
+        <div id="extra">
+          <div class="new">
+            有问题要与其他用户讨论
+            <a href="#">[发表帖子]</a>
+          </div>
+        <div class="total">
+          共有900个话题
+          <a href="#">浏览全部话题&gt;</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
