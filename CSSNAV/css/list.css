@@ -1,0 +1,96 @@
+*{  margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+#nav{
+    width:990px;
+    height:40px;
+    background-color:#E64346;
+    margin:0 auto;
+}
+
+#nav p{
+    width:210px;
+    height:40px;
+    line-height: 40px;
+    background-color:#CD2A2C;
+    float:left;
+}
+
+#nav p a{
+    color:#fff;
+    text-decoration: none;
+    padding:15px;
+    font-weight: bold;
+}
+
+#nav p i{
+   background:url(images/iconlist_2.png) no-repeat -65px 0;
+   float:right;
+   width:20px;
+   height:20px;
+   margin:10px 10px 0 0;
+}
+
+#nav ul{
+    float:left;
+}
+
+#nav li{
+    float:left;
+}
+
+#nav li a{
+    float:left;
+    width:100px;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    color:#fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#nav li a:hover{
+    background-color:#CD2A2C;
+}
+
+
+#list-div{
+    width:990px;
+    margin:0 auto;
+    min-height: 100px;
+}
+
+#list-div .list2-class{
+    width:210px;
+    height: 400px;
+    background-color:#FAFAFA;
+    border:2px solid #CD2A2C;
+    border-top:none;
+    box-sizing: border-box;
+}
+
+#list-div .list2-class>li{
+    width:186px;
+    padding:5px 0 5px 10px;
+    border-bottom:1px solid #fff;
+    border-top:1px solid transparent;
+}
+
+#list-div .list2-class>li>a{
+    font-size: 14px;
+    color:#333;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+li{
+    display:list-item;
+    text-align:-webkit-match-parent;
+}
+
+#list-div .list2-class>li>a:hover{
+    border:1px solid #DDD;
+}
