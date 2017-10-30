@@ -25,8 +25,8 @@
     font-weight: bold;
 }
 
-#nav p i{
-   background:url(images/iconlist_2.png) no-repeat -65px 0;
+#nav p>i{
+   background:url(../images/iconlist_2.png) no-repeat -65px 0;
    float:right;
    width:20px;
    height:20px;
@@ -68,7 +68,7 @@
     height: 400px;
     background-color:#FAFAFA;
     border:2px solid #CD2A2C;
-    border-top:none;
+    border-top:5px;
     box-sizing: border-box;
 }
 
@@ -76,7 +76,7 @@
     width:186px;
     padding:5px 0 5px 10px;
     border-bottom:1px solid #fff;
-    border-top:1px solid transparent;
+    border-top:1px solid transparent;   /* 让上边框透明，否则可以注释掉看看效果不一样*/
 }
 
 #list-div .list2-class>li>a{
@@ -91,6 +91,7 @@ li{
     text-align:-webkit-match-parent;
 }
 
-#list-div .list2-class>li>a:hover{
-    border:1px solid #DDD;
+#list-div .list2-class>li:hover{
+    border-top:1px solid #DDD;
+    border-bottom:1px solid #ddd;
 }
