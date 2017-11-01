@@ -70,7 +70,6 @@
     border:2px solid #CD2A2C;
     border-top:5px;
     box-sizing: border-box;
-    position:relative;
 }
 
 #list-div .list2-class>li{
@@ -82,11 +81,12 @@
 }
 
 #list-div .list2-class>li>a{
+    float:left;
     width:186px;
     font-size: 14px;
     color:#333;
-    text-decoration: none;
-    margin-right: 5px;
+    text-decoration: none;    
+    position:relative;
 }
 
 li{
@@ -99,19 +99,22 @@ li{
     border-bottom:1px solid #ddd;
 }
 
-#list-div .list2-class>#li1:hover{
+#list-div .list2-class>li:hover>a{
+    background-color:blue;
     border-right:0px solid #fff;    
-    z-index: 3px;
+    z-index: 2px;
 }
 
 .list-menu{
+    z-index: 1px;
+    float:left;
     width:800px;
     height:400px;
     border:2px solid #DCDCDC;
     position:absolute;
     left:190px;
     top:0px;
-    
+    display:none;
     background-color:#FFF;
 }
 
