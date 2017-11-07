@@ -70,54 +70,49 @@
     border:2px solid #CD2A2C;
     border-top:5px;
     box-sizing: border-box;
+    position:relative;
 }
 
-#list-div .list2-class>li{
+
+#list-div .list2-class li a{
+    width:186px;
+    font-size: 14px;
+    color:#333;
+    text-decoration: none;
+    
+}
+
+.list-menu{
+    z-index:5;
+    width:800px;
+    height:400px;
+    border:1px solid #DCDCDC;
+    position:absolute;
+    left:185px;
+    top:0px;
+    background-color:#FFF;
+}
+
+
+.list2-class>li>a{
+    display:block;
     width:200px;
     padding:5px 0 5px 10px;
     border-bottom:1px solid #fff;
     border-top:1px solid transparent;   /* 让上边框透明，否则可以注释掉看看效果不一样*/
+}
+
+.list2-class>li>a:hover{
+    border-color:#ddd;
     position:relative;
+    background-color:#fff;  
+    z-index:50;
 }
 
-#list-div .list2-class>li>a{
-    float:left;
-    width:186px;
-    font-size: 14px;
-    color:#333;
-    text-decoration: none;    
-    position:relative;
-}
-
-li{
-    display:list-item;
-    text-align:-webkit-match-parent;
-}
-
-#list-div .list2-class>li:hover{
-    border-top:1px solid #DDD;
-    border-bottom:1px solid #ddd;
-}
-
-#list-div .list2-class>li:hover>a{
-    background-color:blue;
-    border-right:0px solid #fff;    
-    z-index: 2px;
-}
-
-.list-menu{
-    z-index: 1px;
-    float:left;
-    width:800px;
-    height:400px;
-    border:2px solid #DCDCDC;
-    position:absolute;
-    left:190px;
-    top:0px;
+#menu1{
     display:none;
-    background-color:#FFF;
 }
 
-#list-div .list2-class>#li1:hover #menu1{
+.list2-class:hover #menu1{
     display:block;
 }
