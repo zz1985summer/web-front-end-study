@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>容器属性</title>
+        <style>
+            #container{
+                width:600px;
+                border:1px solid #000;
+                display:flex;
+                flex-direction:row-reverse;
+                align-items:flex-start;
+            }
+
+            .c1{
+                background-color:red;
+                width:100px;
+                height:100px;
+            }
+
+            .c2{
+                background-color:green;
+                width:100px;
+                height:100px;
+            }
+
+            .c3{
+                background-color:blue;
+                width:100px;
+                height:100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <!--[if ! IE 6]>
+                <![endif]-->
+            <div class="c1">项目1</div>
+            <div class="c2">项目2</div>
+            <div class="c3">项目3</div>
+        </div>
+    </body>
+</html>

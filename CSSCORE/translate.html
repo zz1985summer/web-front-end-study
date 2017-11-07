@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>转换</title>
+        <style>
+            #d1,#d2{
+                width:200px;
+                height:200px;
+                position:absolute;
+                left:400px;
+                top:200px;
+            }
+            #d1{
+                background-color:#ddd;
+                border:1px solid #333;
+                
+            }
+            #d2{
+                background-color:pink;
+                border:1px solid orange;
+                transform:skew(30deg);
+                
+                opacity:0.5;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">参考元素</div>
+        <div id="d2">转换元素</div>
+    </body>
+</html>
