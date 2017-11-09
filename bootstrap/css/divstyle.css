@@ -20,7 +20,7 @@
 
 @media screen and (max-width:767px){
     #container div{
-        width:40%;
+        width:100%;
         background-color:teal;
         float:left;
         margin-left:5px;
@@ -34,7 +34,7 @@
 
 @media screen and (min-width:768px) and (max-width:991px){
     #container div{
-        width:30%;
+        width:40%;
         background-color:teal;
         float:left;
         margin-left:5px;
