@@ -22,6 +22,8 @@
 #section{
     width:90%;
     margin:6px auto 0;
+    flex-direction:row;
+   /* justify-content: space-between;*/
 }
 
 #nav a{
@@ -50,20 +52,91 @@
 
 #left{
     background-color:purple;
-    float:left;
-    width:150px;
+    width:20%;
     border-radius:5px;
     text-align: center;
     color:black;
-
+    float:left;
 }
 
 #left span{
     display:inline-block;
-    width:100px;
+    width:80%;
     background-color:white;
     margin:10px;
     border-radius:2px;
+}
+
+#center{
+    background-color: rgb(254,185,81);
+    width:58%;
+    float:left;
+    border-radius:5px;
+    margin-left:1%;
+    margin-right:1%;
+}
+#center:after{
+    content:"";
+    clear:both;
+}
+#imagediv{
+    flex-direction:row;
+    margin-top:5px;
+}
+#imagediv img{
+    width:100px;
+}
+
+#right{
+    width:20%;;
+    background-color:rgb(90,87,8);
+    float:left;
+    border-radius:5px;
+    overflow: hidden;
+}
+
+
+#footer{
+    float:left;
+}
+
+@media screen and (max-width:767px){
+    #nav{
+        width:90%;
+        height:60px;
+        background-color:darkslategrey;
+        margin:0 auto;
+        border-radius:5px;
+        padding-left:10px;
+        padding-right:10px;
+
+    }
+
+    #center{
+        background-color: rgb(254,185,81);
+        width:100%;
+        float:left;
+        border-radius:5px;
+        margin-top:1%;
+        margin-top:1%;
+    }
+
+    #right{
+        width:100%;
+        background-color:rgb(90,87,8);
+        float:left;
+        border-radius:5px;
+        overflow: hidden;
+    }
+
+    #left{
+        background-color:purple;
+        width:100%;
+        border-radius:5px;
+        text-align: center;
+        color:black;
+        float:left;
+    }
 }
 
 @media screen and (max-width:1199px) and (min-width:992px){
