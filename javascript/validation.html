@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+</head>
+<body>
+<script>
+    var chars=[];
+    //48~57
+    for(var i=48;i<=57;i++){
+        chars.push(String.fromCharCode(i))
+    }
+    //65~90
+    for(var i=65;i<=90;i++){
+        chars.push(String.fromCharCode(i))
+    }
+    //97~122
+    for(var i=97;i<=122;i++){
+        chars.push(String.fromCharCode(i))
+    }
+
+    function getCode(){
+        for(var i=1,code="";i<=4;i++){
+            code+=chars[parseInt(Math.random()*62)];
+        }
+        return code;
+    }
+
+
+
+    //请用户反复输入验证码
+    while(true){
+        var code=getCode();
+        var input=prompt("code"+":"+code+" Please input validate code:");
+        if(code!=input){
+            document.write("validate failed,please input again");
+        }else{
+            document.write("success!");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

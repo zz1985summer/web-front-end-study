@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双色球</title>
+</head>
+<body>
+<script>
+    document.write("Ready..."+"<br>");
+    var arr=[];
+    var i=0;
+    while(arr.length<6){
+        var i=parseInt(Math.random()*33+1);
+        for(var j=0;j<arr.length;j++){
+            if(i===arr[j]){
+                break;
+            }
+        }
+
+        if(j===arr.length){
+            arr.push(i);
+        }
+    }
+    function cmp(a,b){return a-b;}
+    arr.sort(cmp);
+    var blue=parseInt(Math.random()*16+1);
+    document.write(arr.toString()+" | "+blue);
+</script>
+</body>
+</html>
