@@ -22,14 +22,14 @@ td span{color:red;}
 }
 
 .vali_success{
-    background-image:("/img/ok.png");
+    background-image:url('../img/ok.png');
     padding-left:20px;
     width:0px;height:20px;
     overflow:hidden;
 }
 
 .vali_fail{
-    background-image:url("/img/err.png");
+    background-image:url('../img/err.png');
     border:1px solid red;
     background-color:#ddd;
     color:red;
