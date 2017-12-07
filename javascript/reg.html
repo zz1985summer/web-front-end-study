@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regtest</title>
+</head>
+<body>
+    <script>
+        var str="窗前明月光,日照香炉生紫烟,一行白鹭上青天,日日思君不见君";
+        var names=["明月","紫烟"];
+        var reg=new RegExp(names.join("|"),"g");
+        console.log(String(reg));
+        var kwords=str.match(reg);
+        console.log(String(kwords));
+    </script>
+</body>
+</html>
