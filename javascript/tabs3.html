@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>读取并修改元素的属性</title>
+    <link rel="stylesheet" href="css/2_height.css">
+</head>
+<body>
+    <h2>实现多标签页效果</h2>
+    <ul id="tab">
+        <li><a href="#content1">10元套餐</a></li>
+        <li><a href="#content2">30元套餐</a></li>
+        <li><a href="#content3">50元包月</a></li>
+    </ul>
+    <div id="container">
+        <div id="content1">
+            10元套餐详情:<br/>&nbsp;每月套餐内拨打100分钟,超出部分2毛/分钟
+        </div>
+        <div id="content2">
+            30元套餐详情:<br/>&nbsp;每月套餐内拨打300分钟,超出部分1.5毛/分钟
+        </div>
+        <div id="content3">
+            50元包月详情:<br/>&nbsp;每月无限量随心拨打
+        </div>
+    </div>
+    <script>
+       var ul1=document.querySelectorAll("#tab a");
+       for(var i=0;i<ul1.length;i++){
+
+           ul1[i].onmouseover=function(){
+               var divs=document.querySelectorAll("#container>div");
+               for(var j=0;j<divs.length;j++){
+                   divs[j].style.height="";
+                   divs[j].style.opacity="";
+
+               }
+               console.log("this"+this.href);
+               var kk=this.href.lastIndexOf("#");
+
+               var div=document.querySelector(this.href.slice(kk));
+               div.style.height="100px";
+               div.style.opacity="1";
+
+           };
+       }
+    </script>
+</body>
+</html>
