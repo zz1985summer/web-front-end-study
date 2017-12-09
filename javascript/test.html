@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testclass</title>
+</head>
+<body>
+<p class="p1">Hello World!</p>
+<div id="div1">Hello World!</div>
+<input type="button" onclick="document.body.style.backgroundColor='lavender';" value="Change Background Color"/>
+<script>
+var para=document.createElement("p");
+var node=document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element=document.getElementById("div1");
+element.appendChild(para);
+
+console.log(document.getElementById("div1").firstChild.nodeType);
+
+
+var getP=document.getElementsByClassName("p1");
+console.log(getP.length);
+console.log(getP[0].innerHTML="33333");
+
+getP[0].style.color="red";
+getP[0].style.backgroundColor="#ffcc00";
+</script>
+
+<p class="p1">The paraghran</p>
+</body>
+</html>

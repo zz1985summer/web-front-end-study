@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级联动菜单</title>
+    <style>
+        .hide{display:none;}
+    </style>
+</head>
+<body>
+<select name="provs" id="">
+    <option value="">--请选择--</option>
+    <option value="">北京市</option>
+    <option value="">天津市</option>
+    <option value="">河北省</option>
+</select>
+
+<select name="cities" class="hide" id=""></select>
+
+
+<script>
+    /*实现省和市的级联下拉列表*/
+    var cities=[
+        [{"name":'东城区',"value":101},
+            {"name":'西城区',"value":102},
+            {"name":'海淀区',"value":103},
+            {"name":'朝阳区',"value":104}],
+        [{"name":'河东区',"value":201},
+            {"name":'河西区',"value":202},
+            {"name":'南开区',"value":303}],
+        [{"name":'石家庄市',"value":301},
+            {"name":'廊坊市',"value":302},
+            {"name":'保定市',"value":303},
+            {"name":'唐山市',"value":304},
+            {"name":'秦皇岛市',"value":304}]
+    ];
+    var selProvs=document.querySelector("[name=provs]")
+
+    var secCts=document.querySelector("[name=cities]");
+    //为selProvs绑定选中项改变事件处理函数
+    selProvs.onchange=function(){
+        secCts.innerHTML="";
+        secCts.style.display="none";
+        var i=this.selectedIndex;
+       if(i<=0){
+          secCts.style.display="none";
+       } else{
+           for(var j=0;j<cities[i-1].length;j++){
+
+               var opt=document.createElement("option");
+
+               opt.value=cities[i-1][j].value;
+               var txtNode=document.createTextNode(cities[i-1][j].name);
+               opt.appendChild(txtNode);
+               secCts.appendChild(opt);
+           }
+           secCts.style.display="block";
+           //alert(cities[i-1][0].name);
+       }
+
+    }
+
+</script>
+</body>
+</html>
