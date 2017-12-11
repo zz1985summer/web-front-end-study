@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>msg</title>
+    <link rel="stylesheet" href="css/7.css">
+</head>
+<body>
+    <div id="msg">
+        <a>X</a>
+    </div>
+
+    <script>
+        var msg=document.getElementById("msg");
+        msg.style.bottom="0px";
+        //为msg下的a绑定单击事件
+        msg.firstElementChild.onclick=function(){
+            msg.style.bottom="-200px";
+            //3 seconds later float up
+            setTimeout(function(){
+                msg.style.bottom="0px";
+            },5000)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="tt"></div>
+<button id="btn">Stop</button>
+
+<div id="res"></div>
+<script>
+    var norepeat=[];
+    function task(){
+        var tt=document.querySelector("#tt");
+        var ran=Math.ceil(Math.random()*5);
+
+        for(var i=0;i<norepeat.length;i++){
+            if(norepeat[i]===ran){
+                task();
+            }
+        }
+        norepeat.push(ran);
+        tt.innerHTML="Number: "+ran
+    }
+
+    var timer=setInterval(task,100);
+    var btn=document.querySelector("#btn");
+    var res=document.querySelector("#res");
+    var nowVal;
+    btn.onclick=function(){
+        if(timer!=null){
+            clearInterval(timer);
+            nowVal=tt.innerHTML;
+            timer=null;
+            if(res.innerHTML==null || res.innerHTML==""){
+                res.innerHTML=tt.innerHTML.slice(7);
+            }else{
+                res.innerHTML=res.innerHTML+","+tt.innerHTML.slice(7);
+            }
+
+        }else{
+            timer=setInterval(task,100);
+        }
+    }
+
+</script>
+</body>
+</html>

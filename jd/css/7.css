@@ -1,0 +1,17 @@
+*{margin:0;padding:0}
+#msg{
+    width:200px;
+    position:fixed;
+    height:200px;
+    right:30px;
+    bootom:-200px;
+    background-color:LightBlue;
+    transition:all 2s linear;
+}
+
+#msg>a{
+    float:right;
+    padding:5px 10px;
+    border:1px solid black;
+    cursor:pointer;
+}

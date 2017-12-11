@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>5秒后关闭...</h1>
+
+<button onclick="stop();">停止关闭</button>
+<script>
+    function task(){
+        close();
+    }
+
+    var timer=setTimeout(task,5000);
+    function stop(){
+        clearTimeout(timer);
+        timer=null;
+    }
+</script>
+</body>
+</html>
