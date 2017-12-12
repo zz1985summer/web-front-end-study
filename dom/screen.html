@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>screen</title>
+</head>
+<body>
+<script>
+    var wid=screen.width;
+    document.write(
+        wid<768?"Phone":
+            wid<992?"Pad":
+            wid<1200?"PC":
+                "Large"
+
+    );
+</script>
+</body>
+</html>

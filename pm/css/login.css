@@ -1,0 +1,89 @@
+body{
+	background-color:#ffffff;
+	border-sizing:border-box;
+}
+
+.login-area{
+	background:url(../images/index.png) 0 0 no-repeat;
+	background-size: 940px 778px;
+	padding:38px 38px 267px;
+	position:relative;
+}
+
+
+
+/*--------------------login btn rewrite color----------------------------------------------------*/
+.btn-primary{
+	background-color:#1abc9c;
+	border-color:#1abc9c;
+}
+
+.btn-primary:focus,
+.btn-primary.focus{
+	color: #fff;
+  	background-color: #1abc9c;
+  	border-color: #1abc9c;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #48c9b0;
+  border-color: #48c9b0;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #fff;
+  background-color: #48c9b0;
+  border-color: #48c9b0;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background: #16a085;
+  border-color: #16a085;
+}
+/*------------------------------------------------------------------------*/
+
+.login-screen{
+	background-color: #1abc9c;
+	min-height: 473px;
+	padding: 123px 252px 33px 252px;
+	width:864px;	
+}
+form{
+	background-color:#edeff1;
+	padding:24px 23px 20px;
+	border-radius:6px;
+	position:relative;
+}
+
+.welcome{
+	color:#fff;
+}
+
+/*----…¡À∏µƒ Û±Í----*/
+@keyframes twinkle{
+	0%{
+		opacity:0;
+	}
+	
+	100%{
+		opacity:1;
+	}
+}
+
+#cursor_def{
+	animation:twinkle 0.5s infinite ease-in-out;
+	-webkit-animation:twinkle 1s infinite ease-in-out;
+}
+
+
+
