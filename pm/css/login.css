@@ -4,6 +4,7 @@ body{
 }
 
 .login-area{
+	margin:0 auto;
 	width:940px;
 	background:url(../images/index.png) 0 0 no-repeat;
 	background-size: 940px 778px;
@@ -70,7 +71,7 @@ form{
 	color:#fff;
 }
 
-/*----ÉÁË¸µÄÊó±ê----*/
+/*----ï¿½ï¿½Ë¸ï¿½ï¿½ï¿½ï¿½ï¿½----*/
 @keyframes twinkle{
 	0%{
 		opacity:0;
