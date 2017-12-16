@@ -7,7 +7,7 @@ $(document).ready(function(){
             $('#welcome_words').text($('#welcome_words').text()+message.charAt(i));//message.charAt(i);
             i++;
         }
-         setTimeout(addWord,300);
+         setTimeout(addWord,100);
     }
     addWord();
 });
