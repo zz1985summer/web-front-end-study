@@ -1,6 +1,6 @@
 /*----add welcome msg animation----*/
 $(document).ready(function(){
-    var message='Welcome...';
+    var message='Welcome to MRL System...';
     var i=0;
     function addWord() {
         if (i < message.length){
