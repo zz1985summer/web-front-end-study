@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var eric={
+        id:1001,
+        ename:"Eric",
+        salary:10000,
+        _brith:new Date("1983/12/26").getTime()
+    };
+    //birth不能晚于今天-18年，同时不能
+    Object.defineProperties(eric,{
+       _birth:{
+           enumerable:false,
+           configurable:false
+       },
+       birth:{
+           get:function(){
+               return new Date(this_birth).toLocaleDateString();
+           },
+           set:function(val){
+             var now=new Date();
+             var start=new Date(now);
+             start.setFullYear(
+                 start.getFullYear()-18
+             );
+             var end=new Date(now);
+             end.setFullYear(end.getFullYear()-65);
+
+             if(val<=start && val>=end){
+                 this._birth=val;
+             }else{
+                 throw new RangeError("年龄必须介于18-65之间");
+          }
+           }
+        },
+        enumerable:true,
+        configurable:true
+    });
+
+    //console.dir(eric);
+    eric.brith=15;
+</script>
+</body>
+</html>
