@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var price=12.5;
+    var count=10;
+    console.log(`单价:${price.toFixed(2)},
+    数量:${count},
+    总计:${(price*count).toFixed(2)}`);
+
+    +function(err){
+        var t=0;
+        console.log("连接数据库...耗时0.3秒");
+        t+=0.3;
+        +function(){
+            console.log("查询数据...耗时0.8秒");
+            t+=0.8;
+        }();
+
+        console.log("总耗时："+t);
+        if(err){
+            var t=new Date();
+            console.log("发生了错误，at:"+t);
+        }
+    }(true);
+</script>
+</body>
+</html>
