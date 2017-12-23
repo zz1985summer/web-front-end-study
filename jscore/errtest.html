@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var myerr=new Error("这是我自定义的错误");
+    try{
+        throw myerr;
+    }catch(myerr){
+        console.log(myerr.message);
+    }finally{
+        console.log("无论如何都要执行的内容");
+    }
+</script>
+</body>
+</html>

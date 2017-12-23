@@ -3,21 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>formtest</title>
+    <style>
+        *{
+            margin:0;
+        }
+        #container{
+            height:2000px;
+            width:600px;
+            background:#369;
+            margin:auto;
+
+        }
+
+        #toTop{
+            position:fixed;
+            bottom:0;
+            left:50%;
+            margin-left:300px;
+            background:#761c19;
+            width:40px;
+            height:40px;
+            color:white;
+            display:none;
+
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
-<form action="http://cn.bing.com" onsubmit="return check();">
-    <input type="text" id="email" placeholder="EMAil"><br>
-    <input type="password" id="password" placeholder="password">
-    <input type="submit" value="sign up">
-</form>
+<div id="container">
+
+</div>
+
+<div id="toTop">
+    Top
+</div>
 
 <script>
-    function check(){
-        var email=document.getElementById('email').value;
-        var emailRegExp=/^[a-z0-9_.-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
-        if(!emailRegExp.test(email)){
-            return false;
+    var getTop=document.getElementById('toTop');
+    getTop.onmousemove=function(){
+        document.getElementById('toTop').innerHTML="back to top";
+    };
+    getTop.onmouseout=function(){
+        document.getElementById('toTop').innerHTML="Top";
+    };
+    window.onscroll=function(){
+        var top=document.documentElement.scrollTop;
+
+        //console.log(top);
+        if(top>200){
+            getTop.style.display="block";
+            getTop.onclick=function(){
+                document.documentElement.scrollTop=0;
+                getTop.style.display="none";
+            };
+
+        }else if(top<=200){
+            getTop.style.display="none";
         }
+
+
     }
 </script>
 </body>

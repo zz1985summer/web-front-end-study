@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //salary 禁止遍历，禁止删除
+    //_birth，实际存储生日的毫秒数
+    //birth,保护_birth
+    //when read birth,convert _birth's milliseconds to simply date format
+    "use strict";
+    function Emp(id,ename,salary,birth){
+        this.id=id;
+        this.ename=ename;
+        this.salary=salary;
+
+
+        Object.defineProperties(this,{
+            id:{
+                writable:false,
+                configurable:false
+            },
+            ename:{configurable:false},
+            salary:{
+                enumerable:false,
+                configurable:false
+            },
+            _birth:{
+                enumerable:false,
+                configurable:false
+            },
+            birth:{
+                get:function(){
+                    return new Date(this._birth).toLocaleDateString();
+                },
+                set:function(val){
+                    var now=new Date();
+                    var start=new Date(now);
+                    start.setFullYear(start.getFullYear()-18);
+                    var end=new Date(now);
+                    end.setFullYear(end.getFullYear()-65);
+
+                    if(val<=start&&val>=end){
+                        this._birth=val.getTime();
+                    }else{
+                        throw new RangeError("age must between 18 to 65");
+                    }
+
+                },
+                enumerable:true,
+                configurable:true
+            }
+
+        });
+        this.birth=birth;
+        //
+        Object.preventExtensions(this);
+    }
+
+
+
+    var eric=new Emp(
+        1001,
+        "Eric",
+        10000,
+        new Date("1985/12/26")
+    );
+
+    eric.id++;
+    eric.Birth=290;
+</script>
+</body>
+</html>
