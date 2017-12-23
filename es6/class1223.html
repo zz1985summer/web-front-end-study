@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //声明方式定义函数
+  function foo(x,y){
+      console.log(x,y);
+  }
+  foo(1,2);
+  console.log(foo);
+
+
+  //expressions
+    var x=function (a,b){
+      return a+b;
+    }
+
+    console.log(x(1,2));
+
+    console.log('/*-----------闭包------------*/');
+
+    function test_closer(){
+        var i=999;
+
+        return function(){
+            i=i+1000;
+            console.log("i="+i);
+        }
+    }
+
+    var revoke=test_closer();
+    revoke();
+
+    console.log('/*-----------构造函数声明函数------------*/');
+
+    var f=new Function('x','console.log("这是通过new创建的值是"+x)');
+
+    f(3);
+    console.log('/*-----------构造函数表达式参数------------*/');
+    var operation='x+='+100;
+    var t=Function('x','console.log('+operation+');');
+    t(4);
+
+
+
+    console.log('/*-----------hoisting------------*/');
+
+
+
+    var f=function(x){
+        console.log(x);
+    }
+    f(1);           //1
+    var f=function(x){
+        console.log(++x);
+    }
+    f(1);           //2
+
+    //与上面不同
+    function f(x){
+        console.log(x);
+    }
+    f(1);           //2
+
+    function f(x){
+        console.log(++x);
+    }
+
+    f(1);           //2
+
+
+
+</script>
+</body>
+</html>

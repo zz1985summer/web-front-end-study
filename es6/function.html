@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function foo(){
+        console.log("有"+arguments.length+"个参数")
+        for(var i=0;i<arguments.length;i++){
+            console.log(arguments[i]);
+        }
+    }
+
+    foo(1,'aaaaa',0.22222);
+
+
+    var val1=999;
+    var val2="here is a test";
+    var val3=true;
+
+    //value
+    function f1(x,y,z){
+        x=x+1000;
+        y=y+"no ,is a offical";
+        z=false;
+    }
+
+    f1(val1,val2,val3);
+
+    console.log(val1,val2,val3);
+
+    var arr=[1,2,3,4];
+    function f2(arr){
+       arr[4]=4;
+    }
+
+    for(i in arr){
+        console.log(arr[i]);
+    }
+</script>
+</body>
+</html>

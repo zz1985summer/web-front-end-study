@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //匿名自调函数
+    (function(){
+        var y=1;
+        console.log(y);
+    })();
+
+    (function(y){
+        console.log(y);
+    })(3);
+
+    +function(y){
+        console.log(y);
+    }("加号写法");
+
+    -function(y){
+        console.log(y);
+    }("加号写法");
+
+
+    !function(y){
+        console.log(y);
+    }("加号写法");
+</script>
+</body>
+</html>
