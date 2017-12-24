@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用jQuery</title>
+</head>
+<body>
+<div id="button-container">
+    <button>aaaaa</button>
+    <button>bbbbb</button>
+    <button>ccccc</button>
+</div>
+
+<div id="banner-message" style="display:none;">
+    <h1>Here is a Test Content</h1>
+</div>
+
+
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    var hiddenBox=$("#banner-message");
+    $("#button-container button").on("click",function(event){
+       hiddenBox.show();
+    });
+</script>
+</body>
+</html>
