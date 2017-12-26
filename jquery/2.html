@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<ul>
+    <li><a href="#">收件箱 <span class="badge">133</span></a></li>
+    <li><a href="#">发件箱  <span class="badge">20</span></a></a></li>
+    <li><a href="#">垃圾箱  <span class="badge">567</span></a></a></li>
+</ul>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('ul li a').on('click',function(){
+        var sp=this.childNodes[1];
+        alert(sp);
+        if(sp){
+           $(sp).hide();
+        }else{
+
+            $(sp).show();
+        }
+
+    });
+</script>
+</body>
+</html>

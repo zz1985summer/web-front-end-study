@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            margin:0;
+            padding:0;
+            display:inline-block;
+            width:30%;
+        }
+    </style>
+</head>
+<body>
+<ul id="list">
+    <li>尼康(234)</li>
+    <li>佳能(222)</li>
+    <li>宾得(333)</li>
+    <li>爱国者(44)</li>
+    <li>欧巴(22)</li>
+    <li>卡西欧(3333)</li>
+    <li>三星(55)</li>
+    <li>奥林巴斯(11)</li>
+    <li>其他品牌(222)</li>
+</ul>
+
+<button data-toggle="brandlist">精简显示品牌</button>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('[data-toggle="brandlist"]').click(function(){
+        //判断当前隐藏li个数是否大于0
+        if($('#list li:hidden').length>0){
+            $('#list li').show();
+            $(this).html('精简显示品牌');
+        }else{
+            $('#list li:gt(6):not(:last)').hide();
+            $(this).html('显示全部品牌');
+        }
+    });
+
+</script>
+</body>
+</html>

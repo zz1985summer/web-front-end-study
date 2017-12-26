@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align:center;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            display:inline-block;
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><img src="img/1_s.jpg" alt=""></li>
+    <li><img src="img/2_s.jpg" alt=""></li>
+    <li><img src="img/3_s.jpg" alt=""></li>
+    <li><img src="img/4_s.jpg" alt=""></li>
+
+</ul>
+<hr>
+<div id="disImg"><img src="img/1.jpg" alt=""></div>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('ul li>img').click(function(){
+        var thisName=$(this).attr('src');
+        var imgName=thisName.slice((thisName.indexOf('/')+1));
+        console.log(imgName+"======"+imgName.charAt(0));
+        var picName="img/"+imgName.charAt(0)+".jpg";
+        $('#disImg img').attr('src',picName);
+    });
+</script>
+</body>
+</html>

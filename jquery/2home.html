@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<table id="my-order">
+    <thead>
+    <tr>
+        <th>订单信息</th>
+        <th>收货人</th>
+        <th>订单金额</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td colspan="4">订单编号：12345789</td>
+    </tr>
+    <tr>
+        <td><img src="img/1.jpg" alt=""></td>
+        <td>叮当</td>
+        <td>¥1234.00</td>
+        <td>删除</td>
+    </tr>
+    <tr>
+        <td colspan="4">订单编号：12345789</td>
+    </tr>
+    <tr>
+        <td><img src="img/2.jpg" alt=""></td>
+        <td>叮当</td>
+        <td>¥1234.00</td>
+        <td>删除</td>
+    </tr>
+    <tr>
+        <td colspan="4">订单编号：12345789</td>
+    </tr>
+    <tr>
+        <td><img src="img/3.jpg" alt=""></td>
+        <td>叮当</td>
+        <td>¥1234.00</td>
+        <td>删除</td>
+    </tr>
+    <tr>
+        <td colspan="4">订单编号：12345789</td>
+    </tr>
+    <tr>
+        <td><img src="img/4.jpg" alt=""></td>
+        <td>叮当</td>
+        <td>¥1234.00</td>
+        <td>删除</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    //下面样式的设定应该都用css设置，这里纯联系jq
+    $('#my-order img').css('width','100px');
+    $('table').css({
+        'width':'100%',
+        'border':'1px solid #aaa',
+        'border-collapse':'collapse'    //表格td之间的小缝隙合并
+    });
+    //$('table').css('width','100%');
+    $('td').css('border-top','solid 1px #aaa');
+    $('table th,table td').css('padding','6px 8px').css('border','1px solid #aaa');    //表格上下左右内边距
+    $('#my-order thead tr').css('background','#e5e5e5');
+
+    $('#my-order tbody tr:nth-child(odd)').css('background','#f3f3f3');
+
+    //tbody偶数行tr中的td非第一个子元素
+    $('tbody tr:nth-child(even) td:not(:first-child)').css('text-align','center');
+
+
+</script>
+</body>
+</html>

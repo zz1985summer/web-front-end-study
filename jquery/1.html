@@ -15,9 +15,12 @@
     <h1>Here is a Test Content</h1>
 </div>
 
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet debitis in tenetur! Aliquam animi architecto consectetur delectus dolorem doloribus et, eveniet facere ipsum iusto minima officia perferendis quos veniam veritatis!
+</p>
 
 
-
+<button id="counter">0</button>
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script>
@@ -25,6 +28,16 @@
     $("#button-container button").on("click",function(event){
        hiddenBox.show();
     });
+
+    var result=$('form');
+    console.log(result);
+
+$('#counter').on('click',function(){
+   var val=parseInt($(this).html());
+   var res=val+=1;
+   $(this).html(res.toString());
+});
+
 </script>
 </body>
 </html>
