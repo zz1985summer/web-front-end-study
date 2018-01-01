@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>今日菜谱</h3>
+<select name="" id="today-menu" size="5">
+    <option value="jj">京酱肉丝</option>
+    <option value="yx">鱼香肉丝</option>
+    <option value="qj">青椒肉丝</option>
+    <option value="qd">切丁肉丝</option>
+</select>
+
+
+<h3>我的菜谱</h3>
+<select name="" id="my-menu" size="5" style="height:100px;width:100px;">
+</select>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    //事件代理
+    $('#today-menu').on('click','option',function(){
+        $(this).clone().appendTo('#my-menu');
+    });
+</script>
+</body>
+</html>

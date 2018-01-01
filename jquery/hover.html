@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background:yellow;
+            padding:20px;
+        }
+
+        span{
+            background:red;
+        }
+        p{
+            background:green;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <span>这是一个span</span>
+    <p>这是一个p</p>
+</div>
+
+
+
+
+
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    var i=1;
+   $('div').mouseover(function(){
+       i++;
+      console.log('进入 '+i);
+   });
+
+    $('div').mouseout(function(){
+        i++;
+        console.log('出来');
+    });
+</script>
+</body>
+</html>
