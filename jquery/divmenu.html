@@ -4,29 +4,76 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        
+        .parent{
+            background:#ffff00;
+            min-height:500px;
+        }
+        .left{
+            width:210px;
+            background:red;
+            float:left;
+            min-height:500px;
+        }
+        .right{
+            background:#0f0;
+           /* float:left;*/
+            margin-left:210px;
+            min-height:500px;
+        }
+
+        .luck{
+            min-height:500px;
+            display:none;
+        }
+        .order{
+            min-height:500px;
+        }
+        .help{
+            min-height:500px;
+            display:none;
+        }
     </style>
 </head>
 <body>
 
-
-<ul>
-    <li><a href="#">我的订单</a></li>
-    <li><a href="#">幸运抽奖</a></li>
-    <li><a href="#"></a></li>
-</ul>
-
-
-
-
-<div></div>
-<div></div>
-<div></div>
+<div class="parent">
+    <div class="left">
+        <ul>
+            <li>我的订单</li>
+            <li>幸运抽奖</li>
+            <li>查看帮助</li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="order" style="background:lime;">当前是我的订单页面</div>
+        <div class="luck" style="background:gold;">当前是幸运抽奖页面</div>
+        <div class="help" style="background:grey;">当前是查看帮助页面</div>
+    </div>
+</div>
 
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script>
-   
+    $('.left').on('mouseenter','li',function(){
+        $(this).css('cursor','pointer');
+    });
+
+
+   $('.left').on('click','li',function(){
+      if($(this).html()==="我的订单"){
+          $('.order').css('display','block');
+          $('.luck').css('display','none');
+          $('.help').css('display','none');
+      }else if($(this).html()==="幸运抽奖"){
+          $('.luck').css('display','block');
+          $('.order').css('display','none');
+          $('.help').css('display','none');
+      }else if($(this).html()==="查看帮助"){
+          $('.help').css('display','block');
+          $('.luck').css('display','none');
+          $('.order').css('display','none');
+      }
+   })
 </script>
 </body>
 </html>

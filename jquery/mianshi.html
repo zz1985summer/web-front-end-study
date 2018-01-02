@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .tabs{
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+        .tabs li{
+            float:left;
+            padding:0 10px;
+        }
+        .tabs li.active{
+            border-bottom:2px solid #333;
+        }
+
+        a{
+            text-decoration:none;
+            color:#333;
+
+        }
+    </style>
+</head>
+<body>
+<ul class="tabs">
+    <li><a href="">十元套餐</a></li>
+    <li class="active"><a href="">二十元套餐</a></li>
+    <li><a href="">三十元套餐</a></li>
+</ul>
+
+
+
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+$('.tabs>li>a').click(function(e){
+    e.preventDefault();
+   $(this).parent().addClass('active')
+   .siblings('.active').removeClass('active');
+
+
+});
+
+</script>
+</body>
+</html>

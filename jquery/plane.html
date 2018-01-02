@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align:center;
+            margin:0;
+            padding:0;
+        }
+        #res{
+            margin:0 auto;
+            padding:0;
+        }
+
+
+        #choose div{
+            float:left;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<h1>选飞机</h1>
+<div id="res">
+    <img src="img/plane/p0.png" alt="">
+</div>
+
+<hr>
+<div id="choose">
+    <img src="img/plane/p3.png" alt="">
+    <img src="img/plane/p4.png" alt="">
+    <img src="img/plane/p5.png" alt="">
+</div>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('#choose img').click(function(){
+        var ch=$(this).clone();
+        $('#res img').replaceWith(ch);
+    });
+
+</script>
+</body>
+</html>

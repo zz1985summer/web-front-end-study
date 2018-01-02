@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<label for="uname">用户名：</label>
+<input type="text" id="uname" name="uname"><br>
+<label for="upwd">密码：</label>
+<input type="password" id="upwd" name="upwd"><br>
+
+<input type="button" value="提交注册信息">
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    //$('[type="button"]')
+
+    $('[value*="提交"]').click(function(){
+       var n= $('[name="uname"]').val();
+       var p= $('[name="upwd"]').val();
+        $('[name="uname"]').val('');
+        $('[name="upwd"]').val('');
+    });
+
+</script>
+</body>
+</html>

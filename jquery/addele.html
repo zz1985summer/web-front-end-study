@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            border:1px solid #aaa;
+            padding:8px;
+            display:inline-block;
+            margin:5px;
+        }
+        .close{
+            float:right;
+            cursor:pointer;
+            opacity:.5;
+        }
+    </style>
+</head>
+<body>
+
+<h1>创建新的子节点，删除已有节点</h1>
+<button>添加新的盒子</button>
+<hr>
+<div class="container">
+    <div class="box">
+        <span class="close">&times;</span>
+    </div>
+</div>
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+$('button').click(function(){
+   var span=$('<span class="close">&times;</span>');
+   span.click(function(){
+       console.log('span被单击了');
+       $(this).parent().remove();
+   });
+   var div=$('<div class="box"></div>');
+   div.append(span).css('background',getColor());
+   $('.container').append(div);
+});
+
+function getColor(){
+    var r=Math.floor(Math.random()*256);
+    var g=Math.floor(Math.random()*256);
+    var b=Math.floor(Math.random()*256);
+    return `rgb(${r},${g},${b}`;
+}
+</script>
+</body>
+</html>
