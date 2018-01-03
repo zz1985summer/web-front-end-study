@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position:relative;
+            left:0px;
+            top:100px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="img/star.png" alt="">
+
+<button id="stop">Stop</button>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+
+<script>
+    $('#stop').on('click',function(){
+        $('img').stop();
+    });
+
+
+   $('img').on('click',function(){
+        $(this).animate({
+            left:"800px",
+            top:"600px"
+        },3000);
+
+       $(this).animate({
+           left:"1200px",
+           top:"0px"
+       },3000,'swing');
+
+
+       $(this).animate({
+           width:"150%",
+           transform:"rotate(360deg)",
+           opacity:"0",
+           top:"0px"
+       },3000,'swing',function(){
+           //消失
+           $(this).remove();
+       });
+   });
+</script>
+</body>
+</html>

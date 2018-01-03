@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .panel{
+            border:1px solid #aaa;
+        }
+        .panel-header{
+            background:#f0f0f0;
+            padding:10px;
+            cursor:pointer;
+        }
+
+    </style>
+</head>
+<body>
+<div class="panel">
+    <div class="panel-header">
+        西游记简介
+    </div>
+    <panel-body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque, culpa cupiditate excepturi harum illo impedit libero nam nisi nobis odio perferendis quam quidem rem, repellendus rerum totam unde, vero?</p>
+    </panel-body>
+</div>
+<div class="panel">
+    <div class="panel-header">
+        红楼梦简介
+    </div>
+    <panel-body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid expedita in ipsum totam. A accusamus ad asperiores assumenda dignissimos impedit, odio perspiciatis quia ratione recusandae repellendus suscipit totam velit voluptates?</p>
+    </panel-body>
+</div>
+<div class="panel">
+    <div class="panel-header">
+        水浒传简介
+    </div>
+    <panel-body>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias autem cumque eveniet exercitationem hic id, laudantium modi molestias, odio odit perferendis quam repellat repudiandae sed temporibus vel veritatis voluptates.</p>
+    </panel-body>
+</div>
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.panel-header').click(function(){
+       console.log($(this).next().slideToggle('fast'));
+    });
+</script>
+</body>
+</html>
