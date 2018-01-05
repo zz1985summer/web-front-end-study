@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dropdown{
+            position:relative;
+        }
+        .dropdown-menu{
+            position:absolute;
+            display:none;
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        .dropdown-menu a{
+            text-decoration:none;
+            color:black;
+        }
+        .dropdown>a{
+            text-decoration:none;
+            color:blue;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <a href="#">产品大全</a>
+    <ul class="dropdown-menu">
+        <li><a href="">冰箱</a></li>
+        <li><a href="">洗衣机</a></li>
+        <li><a href="">洗衣机</a></li>
+        <li><a href="">洗衣机</a></li>
+        <li><a href="">洗衣机</a></li>
+    </ul>
+</div>
+
+
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/dw.js"></script>
+<script>
+    $('.dropdown a').dropdown();
+</script>
+</body>
+</html>

@@ -28,3 +28,20 @@ jQuery.fn.min=function(arr){
 
     return result;
 }
+
+
+jQuery.fn.extend({
+    sum:function(){
+        var result=0;
+        this.each(function(i,obj){
+            var num=obj.innerHTML;
+            num=parseFloat(num);
+            result+=num;
+        });
+        return result;
+    },
+    averg:function(){
+        var sum=this.sum();
+        return sum/this.length;
+    }
+});
