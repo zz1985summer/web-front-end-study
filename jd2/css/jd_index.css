@@ -28,7 +28,7 @@ a:hover{
     text-decoration:underline;
 }
 
-#top,#top_main,#nav,#banner,#main,#footer-box,#footer{
+#top,#top_main,#nav,#banner,#main,#footer_box,#footer{
     width:1211px;
     margin:0 auto;
 }
@@ -271,7 +271,7 @@ a:hover{
 }
 
 #cate-box{
-    ／*左浮动，宽度，高度，边框，背景颜色*／
+    /*左浮动，宽度，高度，边框，背景颜色*/
     float: left;
     width:210px;
     height:410px;
@@ -392,3 +392,256 @@ a:hover{
 #cate-box div.sub-cate-banner li{
     margin:5px 0;
 }
+
+/*滑动广告*/
+img{
+    vertical-align:bottom;
+}
+#slider-box{
+    /*宽度，高度，左浮动，上左外边距*/
+    width:670px;
+    height:400px;
+    float:left;
+    margin:10px 0 0 10px;
+}
+
+#slider li{
+    /*宽度，高度，倒角，背景，文字的水平居中，行高，文字的大小，颜色，加粗，左或右外边距,左浮动*/
+    float:left;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background-color:#3e3e3e;
+    text-align:center;
+    line-height:20px;.
+    font-size:14px;
+    color:#fff;
+    margin-right:10px;
+}
+
+#slider li:hover{
+    background-color:#e4393c;
+    cursor:pointer;
+}
+
+/*定位轮滑按钮*/
+#slider{
+    position:relative;
+}
+#slider ul{
+    position:absolute;
+    right:35px;
+    bottom:25px;
+}
+
+/*三幅小广告*/
+#ad{
+    width:670px;
+    height:160px;
+    border:1px solid #ddd;
+    border-top:none;
+}
+
+#ad>a{
+    float:left;
+    width:25px;
+    height:35px;
+    background:url('../images/index/ad-arraw.png');
+    margin-top:62px;
+}
+
+#ad>a.next{
+    background-position:0 -37px;
+    float:right;
+}
+
+#ad>a:hover{
+    background-image:url('../images/index/ad-arraw-hover.png');
+}
+
+#ad li{
+    /*左浮动，宽度，内容水平居中，上下内边距*/
+    float:left;
+    width:205px;
+    text-align:center;
+    padding:10px 0;
+}
+
+#ad li.mid{
+    /*宽度，边框*/
+    width:208px;
+    border:1px solid #ddd;
+    border-top:none;
+    border-bottom:none;
+}
+
+/*额外关注*/
+#extra-focus{
+    width:310px;
+    height:400px;
+    float:right;
+    margin-top:10px;
+}
+
+#news p a{
+    float:right;
+    color: #005aa0;
+}
+
+#news p b{
+    font-size:14px;
+}
+#news p{
+    padding:10px 0 5px 0;
+}
+
+#news>div{
+    /*边框，min-height，上下内边距*/
+    border:1px solid #ddd;
+    border-top:2px solid #aaa;
+    padding:4px 0;
+    overflow:hidden;
+}
+#news>div ul{
+    width:154px;
+    padding:0 10px;
+    line-height:25px;
+}
+
+#news>div ul.rt{
+    border-left:1px solid #ddd;
+}
+
+#news{
+    margin-bottom:10px;
+}
+
+/*虚拟相关*/
+#virtuals{
+    /*宽度，高度，左上边框*/
+    width:310px;
+    height:175px;
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+}
+
+#virtuals li{
+    width:77.25px;
+    height:87px;
+    float:left;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+
+}
+#virtuals a{
+    display:block;
+    text-align:center;
+}
+
+#virtuals b{
+    display:block;
+    width:42px;
+    height:29px;
+    background-image:url('../images/index/virtuals-20140606.png');
+    background-repeat:no-repeat;
+    margin:10px auto;
+}
+
+#virtuals li.jipiao b{
+    background-position:0 -46px;
+}
+
+#virtuals i{
+    display:block;
+    width:0px;
+    height:0px;
+    border:4px solid transparent;
+    border-top-color:#ddd;
+    margin:8px auto;
+}
+
+/*footer-box*/
+#footer_box{
+    /*上外边距，上边框，上内边距，overflow*/
+    border-top:1px solid #ddd;
+    margin-top:10px;
+    padding-top:10px;
+    overflow:hidden;
+}
+
+#footer_box p{
+    float:left;
+    width:40px;
+    height:40px;
+    margin:0 10px 0 50px;
+    background-image:url('../images/iconlist_2.png');
+}
+
+#footer_box ul{
+    float:left;
+    width:142px;
+    line-height:22px;
+}
+
+
+
+p.shopping-guide{
+    background-position:0 -55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*联系我们*/
+#footer{
+    text-align:center;
+    border-top:1px solid #ddd;
+    padding:20px 0;
+}
+#footer>a{
+    padding:0 10px;
+}
+#footer a:not(:first-child){
+    border-left:1px solid #ddd;
+    padding:0 10px;
+}
+
+#footer>div{
+    margin-top:10px;
+}
+
+#footer>div p a{
+    padding:0 5px;
+}
+#footer>div p a:not(:first-child){
+    border-left:1px solid #ddd;
+    padding:0 5px;
+}
+
+#footer>div p{
+    margin-top:5px;
+}
+
+#footer ul{
+    margin:25px auto;
+    position:relative;
+    left:30%;
+}
+#footer ul li{
+    float:left;
+    margin-left:15px;
+
+
+}
+
+footer ul>li{
+    margin-left:50%;
+}
+
